@@ -12,6 +12,9 @@ const connect = function () {
   conn.on("connect", () => {
     console.log('Connection is successfully established.');
     conn.write('Name: AZH');
+/*  setInterval(() => {
+      conn.write('Move: up');
+    }, 50); */
   });
 
   conn.on('data', (data) => {
@@ -23,4 +26,4 @@ const connect = function () {
 console.log("Connecting ...");
 connect();
 
-module.exports = client;
+module.exports = connect;
